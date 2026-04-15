@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MasonryGrid from '../components/MasonryGrid.jsx';
+import restaurants from '../data/restaurants.js';
+
+const totalCount = restaurants.main.length + restaurants.dessert.length;
+---
+
+<Layout title="식당 - Sevilla Travel Guide 2026" activeTab="restaurants">
+  <div class="sec-head">
+    <h2 class="sec-head__title">추천 식당</h2>
+    <p class="sec-head__sub">타파스, 버거, 츄러스, 아이스크림까지 세비야 맛집 {totalCount}곳</p>
+  </div>
+
+  <MasonryGrid client:visible items={restaurants.main} />
+
+  <h3 class="sub-label"><i class="fa-solid fa-ice-cream"></i> 디저트 &middot; 카페</h3>
+  <MasonryGrid client:visible items={restaurants.dessert} />
+</Layout>

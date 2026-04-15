@@ -1,0 +1,21 @@
+{
+  "name": "sevilla-travel",
+  "version": "1.0.0",
+  "description": "Sevilla Travel Information 2026",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@astrojs/react": "^5.0.3",
+    "astro": "^6.1.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
