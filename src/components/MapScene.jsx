@@ -137,6 +137,8 @@ export default function MapScene({ locations = [] }) {
   }, [mapReady, locations, active]);
 
   /* ── 3. 카테고리 토글 ── */
+  const ALL_KEYS = Object.keys(CATEGORIES);
+
   const toggleCat = useCallback((key) => {
     setActive(prev => {
       const next = new Set(prev);
@@ -149,6 +151,23 @@ export default function MapScene({ locations = [] }) {
       return next;
     });
     setSelected(null);
+  }, []);
+
+  const selectAll = useCallback(() => {
+    // daytrip이 꺼져있다가 켜지더라도 fitBounds 대신 세비야 기본 뷰로 복귀
+    prevDaytripRef.current = true;
+    setActive(new Set(ALL_KEYS));
+    setSelected(null);
+    if (mapRef.current) {
+      mapRef.current.flyTo({
+        center:  SEVILLA_CENTER,
+        zoom:    SEVILLA_ZOOM,
+        pitch:   SEVILLA_PITCH,
+        bearing: SEVILLA_BEARING,
+        duration: 800,
+        essential: true,
+      });
+    }
   }, []);
 
   /* ── 4. 근교 켜짐/꺼짐 시 뷰 전환 ── */
@@ -202,6 +221,24 @@ export default function MapScene({ locations = [] }) {
 
       {/* 카테고리 필터 */}
       <div className="sev-filters" role="toolbar" aria-label="카테고리 필터">
+        {/* 전체 버튼 */}
+        {(() => {
+          const isAll = active.size === ALL_KEYS.length;
+          return (
+            <button
+              className={`sev-filter${isAll ? ' sev-filter--on' : ''}`}
+              style={{ '--cc': '#555' }}
+              onClick={selectAll}
+              aria-pressed={isAll}
+            >
+              <span>🗺️</span>
+              <span>전체</span>
+              <span className="sev-filter__dot" />
+            </button>
+          );
+        })()}
+
+        {/* 개별 카테고리 버튼 */}
         {Object.entries(CATEGORIES).map(([key, cat]) => {
           const isOn = active.has(key);
           return (
