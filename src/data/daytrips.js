@@ -1,10 +1,8 @@
-const img = (url) => `https://wsrv.nl/?url=${encodeURIComponent(url)}&n=-1`;
-
 const daytrips = [
   {
     name: '그라나다',
     nameEn: 'Granada',
-    image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/View_of_the_Alhambra_and_Sierra_Nevada_-_Granada_-_Spain.jpg/800px-View_of_the_Alhambra_and_Sierra_Nevada_-_Granada_-_Spain.jpg'),
+    image: '/sevilla-travel/images/granada-alhambra.jpg',
     visited: true,
     badge: { type: 'rec', icon: 'fa-thumbs-up', text: '방문' },
     address: 'Granada, Andalucia (세비야에서 약 250km)',
@@ -30,7 +28,7 @@ const daytrips = [
   {
     name: '론다',
     nameEn: 'Ronda',
-    image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Ronda_-_View_from_Southwest_-_2.jpg/800px-Ronda_-_View_from_Southwest_-_2.jpg'),
+    image: '/sevilla-travel/images/ronda.jpg',
     badge: { type: 'star', icon: 'fa-bridge', text: '절벽 도시' },
     address: 'Ronda, Malaga (세비야에서 약 130km)',
     route: {
@@ -51,7 +49,7 @@ const daytrips = [
   {
     name: '카디스',
     nameEn: 'Cadiz',
-    image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Cadiz_Quay_and_Cathedral_edited.jpg/800px-Cadiz_Quay_and_Cathedral_edited.jpg'),
+    image: '/sevilla-travel/images/cadiz.jpg',
     visited: true,
     badge: { type: 'rec', icon: 'fa-thumbs-up', text: '방문' },
     address: 'Cadiz, Andalucia (세비야에서 약 120km)',
@@ -76,7 +74,7 @@ const daytrips = [
   {
     name: '코르도바',
     nameEn: 'Cordoba',
-    image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Interior_de_la_Mezquita_de_C%C3%B3rdoba_2016_01.jpg/800px-Interior_de_la_Mezquita_de_C%C3%B3rdoba_2016_01.jpg'),
+    image: '/sevilla-travel/images/cordoba-mezquita.jpg',
     badge: { type: 'star', icon: 'fa-mosque', text: '메스키타' },
     address: 'Cordoba, Andalucia (세비야에서 약 140km)',
     route: {

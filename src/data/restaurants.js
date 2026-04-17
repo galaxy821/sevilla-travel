@@ -1,11 +1,9 @@
-const img = (url) => `https://wsrv.nl/?url=${encodeURIComponent(url)}&n=-1`;
-
 const restaurants = {
   main: [
     {
       name: 'Bendala Braseria',
       nameEn: '브라세리아 · €20~30',
-      image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Tuna_tartare_%283250236418%29.jpg/800px-Tuna_tartare_%283250236418%29.jpg'),
+      image: '/sevilla-travel/images/tuna-tartare.jpg',
       visited: true,
       badge: { type: 'rec', icon: 'fa-fire', text: '추천' },
       address: 'P.º de Catalina de Ribera, 4, Casco Antiguo, 41004 Sevilla',
@@ -19,7 +17,7 @@ const restaurants = {
     {
       name: 'Uno de Delicias',
       nameEn: '수제 버거 · €10~20',
-      image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Double_steak_burger.jpg/800px-Double_steak_burger.jpg'),
+      image: '/sevilla-travel/images/burger.jpg',
       visited: true,
       badge: { type: 'star', icon: 'fa-burger', text: '버거' },
       address: 'P.º de las Delicias, 1, Casco Antiguo, 41001 Sevilla',
@@ -33,7 +31,7 @@ const restaurants = {
     {
       name: 'Bar El Comercio',
       nameEn: '타파스 바 · 츄러스 · €1~10',
-      image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Chocolate_con_churros_en_La_Giralda.jpg/800px-Chocolate_con_churros_en_La_Giralda.jpg'),
+      image: '/sevilla-travel/images/churros-chocolate.jpg',
       badge: { type: 'rec', icon: 'fa-cookie-bite', text: '츄러스' },
       address: 'C. Lineros, 9, Casco Antiguo, 41004 Sevilla',
       info: [
@@ -46,7 +44,7 @@ const restaurants = {
     {
       name: 'Kukuchurro',
       nameEn: 'Plaza del Salvador · 추로스 전문점',
-      image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Churros_de_lazo.jpg/800px-Churros_de_lazo.jpg'),
+      image: '/sevilla-travel/images/churros.jpg',
       badge: { type: 'star', icon: 'fa-cookie-bite', text: '간식' },
       address: 'Pl. del Salvador, 15, Casco Antiguo, 41004 Sevilla',
       info: [
@@ -60,7 +58,7 @@ const restaurants = {
     {
       name: 'Helados La Abuela',
       nameEn: '아이스크림',
-      image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Gelato_su_cono.jpg/800px-Gelato_su_cono.jpg'),
+      image: '/sevilla-travel/images/gelato.jpg',
       visited: true,
       badge: { type: 'star', icon: 'fa-ice-cream', text: '디저트' },
       address: 'C. Larana, 10, Casco Antiguo, 41003 Sevilla',

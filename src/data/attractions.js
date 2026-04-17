@@ -1,10 +1,8 @@
-const img = (url) => `https://wsrv.nl/?url=${encodeURIComponent(url)}&n=-1`;
-
 const attractions = [
   {
     name: '스페인 광장',
     nameEn: 'Plaza de Espana',
-    image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/La_Plaza_de_Espa%C3%B1a_de_Sevilla.JPG/800px-La_Plaza_de_Espa%C3%B1a_de_Sevilla.JPG'),
+    image: '/sevilla-travel/images/plaza-espana.jpg',
     visited: true,
     badge: { type: 'free', icon: 'fa-ticket', text: '무료' },
     address: 'Av. Isabel la Catolica, 41004 Sevilla',
@@ -24,7 +22,7 @@ const attractions = [
   {
     name: '메트로폴 파라솔',
     nameEn: 'Setas de Sevilla · 라스 세타스 데 세비야',
-    image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sunset_in_Metropol_Parasol_-_Seville.JPG/800px-Sunset_in_Metropol_Parasol_-_Seville.JPG'),
+    image: '/sevilla-travel/images/metropol-parasol.jpg',
     visited: true,
     badge: { type: 'star', icon: 'fa-binoculars', text: '전망대' },
     address: 'Pl. de la Encarnacion, s/n, Casco Antiguo, 41003 Sevilla',
@@ -41,7 +39,7 @@ const attractions = [
   {
     name: '세비야 대성당',
     nameEn: 'Catedral de Sevilla',
-    image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Catedral_de_Sevilla-2025_01.jpg/800px-Catedral_de_Sevilla-2025_01.jpg'),
+    image: '/sevilla-travel/images/catedral-sevilla.jpg',
     visited: true,
     badge: { type: 'star', icon: 'fa-church', text: '세계유산' },
     address: 'Av. de la Constitucion, s/n, Casco Antiguo, 41004 Sevilla',
@@ -57,7 +55,7 @@ const attractions = [
   {
     name: '알카사르',
     nameEn: 'Real Alcazar de Sevilla',
-    image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/PATIO_DE_LAS_DONCELLAS._REALES_ALC%C3%81ZARES_DE_SEVILLA._%282%29.JPG/800px-PATIO_DE_LAS_DONCELLAS._REALES_ALC%C3%81ZARES_DE_SEVILLA._%282%29.JPG'),
+    image: '/sevilla-travel/images/alcazar.jpg',
     badge: { type: 'rec', icon: 'fa-thumbs-up', text: '강력 추천' },
     address: 'Casco Antiguo, 41004 Sevilla',
     info: [

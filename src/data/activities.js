@@ -1,10 +1,8 @@
-const img = (url) => `https://wsrv.nl/?url=${encodeURIComponent(url)}&n=-1`;
-
 const activities = [
   {
     name: '세비야 자전거 대여',
     nameEn: 'Sevici · Guadalquivir Riverside Ride',
-    image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sevici_Rental_Bikes_-_Seville_-_Spain.jpg/800px-Sevici_Rental_Bikes_-_Seville_-_Spain.jpg'),
+    image: '/sevilla-travel/images/activities-bike.jpg',
     badge: { type: 'rec', icon: 'fa-bicycle', text: '추천' },
     address: '세비야 시내 Sevici 정류장 및 자전거 대여점',
     route: {

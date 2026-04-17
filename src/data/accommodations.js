@@ -1,10 +1,8 @@
-const img = (url) => `https://wsrv.nl/?url=${encodeURIComponent(url)}&n=-1`;
-
 const accommodations = [
   {
     name: 'MUSH ROOM APARTAMENTOS',
     nameEn: 'The Mush Rooms Apartamentos Turisticos Sevilla',
-    image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Barrio_Santa_Cruz_%28Sevilla%29.jpg/800px-Barrio_Santa_Cruz_%28Sevilla%29.jpg'),
+    image: '/sevilla-travel/images/accommodation.jpg',
     visited: false,
     badge: { type: 'rec', icon: 'fa-thumbs-up', text: '최고 추천' },
     address: 'C. Imagen, 4, Casco Antiguo, 41003 Sevilla',

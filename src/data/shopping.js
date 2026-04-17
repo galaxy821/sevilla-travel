@@ -1,5 +1,3 @@
-const img = (url) => `https://wsrv.nl/?url=${encodeURIComponent(url)}&n=-1`;
-
 const shopping = {
   souvenir: {
     label: '오렌지 · 기념품',
@@ -8,7 +6,7 @@ const shopping = {
       {
         name: 'Orange Tree Sevilla',
         nameEn: '오렌지 기념품점',
-        image: img('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/3_Patio_de_los_Naranjos_de_la_Catedral_de_Sevilla._Sevilla.%281%29.JPG/800px-3_Patio_de_los_Naranjos_de_la_Catedral_de_Sevilla._Sevilla.%281%29.JPG'),
+        image: '/sevilla-travel/images/orange-tree.jpg',
         badge: { type: 'rec', icon: 'fa-thumbs-up', text: '선물 추천' },
         address: 'C/ Ximenez de Enciso, 22, Casco Antiguo, 41004 Sevilla',
         info: [
@@ -31,7 +29,7 @@ const shopping = {
       {
         name: 'Carrefour Express',
         nameEn: '숙소 장보기',
-        image: img('https://upload.wikimedia.org/wikipedia/commons/d/dc/Carrefour-express-vll-030610.jpg'),
+        image: '/sevilla-travel/images/carrefour.jpg',
         badge: { type: 'star', icon: 'fa-kitchen-set', text: '요리' },
         info: [
           { icon: 'tip', faIcon: 'fa-lightbulb', html: 'MUSH ROOM APARTAMENTOS에서 조리할 계획이라면 가까운 까르푸, 디아, 메르카도나에서 장보기.' },
