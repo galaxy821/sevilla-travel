@@ -56,7 +56,6 @@ export default function MapScene({ locations = [] }) {
         pitch:     SEVILLA_PITCH,
         bearing:   SEVILLA_BEARING,
         antialias: true,
-        maxBounds: [[-8.5, 35.5], [-2.5, 40.5]], // Andalusia region
       });
 
       mapRef.current = map;
@@ -120,7 +119,7 @@ export default function MapScene({ locations = [] }) {
           setIsAnimating(true);
           mapRef.current.flyTo({
             center:   loc.coords,
-            zoom:     Math.max(mapRef.current.getZoom(), loc.category === 'daytrip' ? 8 : 15),
+            zoom:     loc.category === 'daytrip' ? 7 : Math.max(mapRef.current.getZoom(), 15),
             pitch:    loc.category === 'daytrip' ? 20 : 50,
             duration: 700,
             essential: true,
