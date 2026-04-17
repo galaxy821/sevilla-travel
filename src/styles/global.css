@@ -157,6 +157,30 @@ button { font-family: inherit; }
   margin-top: 6px;
 }
 
+.hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: rgba(255,255,255,.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.26);
+  border-radius: var(--r-full);
+  color: var(--c-white);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  transition: background var(--t-fast), transform var(--t-fast), border-color var(--t-fast);
+}
+.hero__link:hover {
+  background: rgba(255,255,255,.24);
+  border-color: rgba(255,255,255,.5);
+  transform: translateY(-2px);
+}
+.hero__link i { font-size: 12px; }
+
 /* ==============================================
    STICKY TAB NAV
    ============================================== */
