@@ -151,12 +151,18 @@ export default function MapScene({ locations = [] }) {
     setSelected(null);
   }, []);
 
-  /* ── 4. 근교 전용 선택 시 줌 아웃 ── */
+  /* ── 4. 근교 켜짐/꺼짐 시 뷰 전환 ── */
+  const prevDaytripRef = useRef(true); // 초기 active에 daytrip 포함
+
   useEffect(() => {
     if (!mapReady || !mapRef.current) return;
-    const isDaytripOnly = active.size === 1 && active.has('daytrip');
 
-    if (isDaytripOnly) {
+    const hasDaytrip  = active.has('daytrip');
+    const hadDaytrip  = prevDaytripRef.current;
+    prevDaytripRef.current = hasDaytrip;
+
+    if (!hadDaytrip && hasDaytrip) {
+      // 꺼짐 → 켜짐: 근교 도시 전체가 보이도록 fitBounds
       const pts = locations.filter(l => l.category === 'daytrip');
       if (pts.length) {
         const lngs = pts.map(l => l.coords[0]);
@@ -167,7 +173,8 @@ export default function MapScene({ locations = [] }) {
           { padding: 60, pitch: 20, duration: 900, essential: true },
         );
       }
-    } else {
+    } else if (hadDaytrip && !hasDaytrip) {
+      // 켜짐 → 꺼짐: 세비야 기본 뷰로 복귀
       mapRef.current.flyTo({
         center:  SEVILLA_CENTER,
         zoom:    SEVILLA_ZOOM,
@@ -177,6 +184,7 @@ export default function MapScene({ locations = [] }) {
         essential: true,
       });
     }
+    // 다른 필터 토글: 뷰 변경 없음
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active, mapReady]);
 
