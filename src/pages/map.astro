@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MapScene from '../components/MapScene.jsx';
+import mapLocations from '../data/mapLocations.js';
 ---
 
 <Layout title="지도 - Sevilla Travel Guide 2025" activeTab="map">
   <div class="sec-head">
     <h2 class="sec-head__title">여행 지도</h2>
-    <p class="sec-head__sub">세비야 시내 추천 장소와 근교 도시를 한눈에 — 핀을 hover해 보세요</p>
+    <p class="sec-head__sub">세비야 시내 추천 장소와 근교 도시를 한눈에 — 핀을 클릭해 상세 정보를 확인하세요</p>
   </div>
-  <MapScene client:visible />
+  <MapScene client:visible locations={mapLocations} />
 </Layout>
